@@ -30,10 +30,13 @@ const pecas = {
         "energia": 0,
         "velocidade": -2
     }
-}
-console.log(pecas)
-const controle = document . querySelectorAll ("[data-controle]")
-const estatistica = document . querySelectorAll ("[data-estatistica]")
+};
+
+const controle = document . querySelectorAll ("[data-controle]");
+const estatistica = document . querySelectorAll ("[data-estatistica]");
+const imagens = [ "img/Robotron 2000 - Preto.png", "img/Robotron 2000 - Azul.png", "img/Robotron 2000 - Branco.png", "img/Robotron 2000 - Amarelo.png",
+"img/Robotron 2000 - Rosa.png", "img/Robotron 2000 - Vermelho.png"];
+const botao__cor = document.getElementById ("botao__robo");
 
 controle.forEach ( (elemento) => {
      elemento.addEventListener ("click", (evento)=>{
@@ -66,4 +69,16 @@ estatistica.forEach ( (elemento) => {
 
 }
 
+let indice = 0;
 
+botao__cor.addEventListener("click", function(){
+        var img = document.getElementById("robotron");
+    indice = (indice + 1) % imagens.length;
+    img.src = imagens[indice];
+}
+
+)
+
+function pintarRobo () {
+
+    }
